@@ -22,6 +22,7 @@ export default function Header() {
             <NavLink href="#solutions">Solutions</NavLink>
             <NavLink href="#success-stories">Success Stories</NavLink>
             <NavLink href="#process">Process</NavLink>
+            <NavLink href="#blog">Blog</NavLink>
             <NavLink href="#faq">FAQ</NavLink>
           </nav>
         </div>
@@ -46,6 +47,7 @@ export default function Header() {
                             <NavLink href="#solutions">Solutions</NavLink>
                             <NavLink href="#success-stories">Success Stories</NavLink>
                             <NavLink href="#process">Process</NavLink>
+                            <NavLink href="#blog">Blog</NavLink>
                             <NavLink href="#faq">FAQ</NavLink>
                         </nav>
                          <Button asChild className="rounded-full">

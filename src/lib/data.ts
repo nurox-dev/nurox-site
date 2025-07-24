@@ -107,6 +107,58 @@ export const integrationSteps: IntegrationStep[] = [
     }
 ];
 
+export interface BlogPost {
+  title: string;
+  excerpt: string;
+  imageUrl: string;
+  dataAiHint: string;
+  category: string;
+  date: string;
+  author: {
+    name: string;
+    avatarUrl: string;
+  };
+}
+
+export const blogPosts: BlogPost[] = [
+    {
+        title: "The Future of AI in Business: 5 Trends to Watch",
+        excerpt: "Artificial intelligence is no longer a futuristic concept; it's a present-day reality transforming industries. From machine learning to natural language processing, AI is reshaping how businesses operate. In this post, we'll explore five key trends that are set to define the future of AI in the business world.",
+        imageUrl: "https://placehold.co/600x400.png",
+        dataAiHint: "AI future",
+        category: "AI Trends",
+        date: "July 24, 2024",
+        author: {
+            name: "Alex Johnson",
+            avatarUrl: "https://placehold.co/100x100.png"
+        }
+    },
+    {
+        title: "How to Prepare Your Data for Machine Learning",
+        excerpt: "A successful machine learning model is built on a foundation of high-quality data. But what does 'high-quality' mean, and how do you get there? This guide will walk you through the essential steps of data preparation, from cleaning and formatting to feature engineering, ensuring your ML projects get off to a strong start.",
+        imageUrl: "https://placehold.co/600x400.png",
+        dataAiHint: "data science",
+        category: "Machine Learning",
+        date: "July 20, 2024",
+        author: {
+            name: "Samantha Lee",
+            avatarUrl: "https://placehold.co/100x100.png"
+        }
+    },
+    {
+        title: "Ethical AI: Navigating the Complexities of Bias and Fairness",
+        excerpt: "As AI systems become more integrated into our lives, ensuring they are fair and unbiased is critically important. This article delves into the complexities of ethical AI, discussing common sources of bias, strategies for mitigation, and the importance of transparency and accountability in building AI that benefits everyone.",
+        imageUrl: "https://placehold.co/600x400.png",
+        dataAiHint: "ethics technology",
+        category: "AI Ethics",
+        date: "July 15, 2024",
+        author: {
+            name: "David Chen",
+            avatarUrl: "https://placehold.co/100x100.png"
+        }
+    }
+];
+
 
 export const caseStudies = [
     {
