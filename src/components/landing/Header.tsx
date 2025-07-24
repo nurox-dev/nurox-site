@@ -19,9 +19,9 @@ export default function Header() {
             <span className="font-bold sm:inline-block text-lg">Nurox</span>
           </Link>
           <nav className="hidden gap-6 text-sm md:flex">
+            <NavLink href="/demo">Demo</NavLink>
             <NavLink href="/solutions">Solutions</NavLink>
             <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="/demo">Demo</NavLink>
             <NavLink href="#faq">FAQ</NavLink>
           </nav>
         </div>
@@ -40,9 +40,9 @@ export default function Header() {
                             <span className="font-bold text-lg">Nurox</span>
                         </Link>
                         <nav className="grid gap-4 text-lg">
+                            <NavLink href="/demo">Demo</NavLink>
                             <NavLink href="/solutions">Solutions</NavLink>
                             <NavLink href="/blog">Blog</NavLink>
-                            <NavLink href="/demo">Demo</NavLink>
                             <NavLink href="#faq">FAQ</NavLink>
                         </nav>
                     </div>
