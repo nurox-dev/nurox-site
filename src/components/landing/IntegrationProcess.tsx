@@ -1,4 +1,5 @@
 import { integrationSteps } from "@/lib/data";
+import Image from "next/image";
 
 export default function IntegrationProcess() {
   return (
@@ -13,16 +14,19 @@ export default function IntegrationProcess() {
           </p>
         </div>
         <div className="relative">
-          {/* Dotted line for desktop */}
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2">
+           <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2">
              <div className="w-full h-full bg-repeat-x bg-center" style={{backgroundImage: 'linear-gradient(to right, hsl(var(--border)) 50%, transparent 50%)', backgroundSize: '16px 2px'}}></div>
           </div>
 
           <div className="grid grid-cols-1 gap-12 md:grid-cols-4 md:gap-8">
             {integrationSteps.map((step, index) => (
-              <div key={step.step} className="relative flex flex-col items-center text-center">
-                <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full text-2xl font-bold border-4 border-background mb-4">
-                  {step.step}
+              <div key={step.step} className="relative flex flex-col items-center text-center p-4 rounded-lg transition-all duration-300 hover:bg-secondary/50">
+                <div className="relative z-10 w-full h-40 mb-4 rounded-lg overflow-hidden">
+                    <Image src={step.imageUrl} alt={step.title} layout="fill" objectFit="cover" data-ai-hint={step.dataAiHint} />
+                    <div className="absolute inset-0 bg-primary/30"></div>
+                     <div className="absolute top-4 left-4 flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full text-2xl font-bold border-4 border-background">
+                        {step.step}
+                    </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-muted-foreground">{step.description}</p>

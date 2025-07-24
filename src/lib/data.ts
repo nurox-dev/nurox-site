@@ -72,28 +72,38 @@ export interface IntegrationStep {
   step: number;
   title: string;
   description: string;
+  imageUrl: string;
+  dataAiHint: string;
 }
 
 export const integrationSteps: IntegrationStep[] = [
     {
         step: 1,
         title: "Discovery & Planning",
-        description: "We work with you to understand your unique challenges and goals, crafting a tailored AI strategy."
+        description: "We work with you to understand your unique challenges and goals, crafting a tailored AI strategy.",
+        imageUrl: "https://placehold.co/400x300.png",
+        dataAiHint: "planning strategy"
     },
     {
         step: 2,
         title: "Data Integration & Model Training",
-        description: "Our team securely integrates your data sources and trains our AI models for peak performance."
+        description: "Our team securely integrates your data sources and trains our AI models for peak performance.",
+        imageUrl: "https://placehold.co/400x300.png",
+        dataAiHint: "data server"
     },
     {
         step: 3,
         title: "Seamless Implementation",
-        description: "We deploy the AI solution into your existing workflow with minimal disruption to your operations."
+        description: "We deploy the AI solution into your existing workflow with minimal disruption to your operations.",
+        imageUrl: "https://placehold.co/400x300.png",
+        dataAiHint: "code screen"
     },
     {
         step: 4,
         title: "Continuous Optimization & Support",
-        description: "We provide ongoing support and continuously refine the AI to ensure long-term success and growth."
+        description: "We provide ongoing support and continuously refine the AI to ensure long-term success and growth.",
+        imageUrl: "https://placehold.co/400x300.png",
+        dataAiHint: "team support"
     }
 ];
 
