@@ -1,0 +1,15 @@
+import Blog from "@/components/landing/Blog";
+import Footer from "@/components/landing/Footer";
+import Header from "@/components/landing/Header";
+
+export default function BlogPage() {
+    return (
+        <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">
+                <Blog />
+            </main>
+            <Footer />
+        </div>
+    )
+}

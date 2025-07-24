@@ -27,7 +27,7 @@ export default function Hero() {
               <Link href="#demo">Request a Demo</Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="rounded-full bg-card hover:bg-card/90 shadow-lg hover:shadow-xl transition-shadow">
-              <Link href="#solutions">Learn More</Link>
+              <Link href="/solutions">Learn More</Link>
             </Button>
           </div>
         </div>
