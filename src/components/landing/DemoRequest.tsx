@@ -50,7 +50,7 @@ export default function DemoRequest() {
   }, [state, toast]);
 
   return (
-    <section id="demo" className="py-20 md:py-28 bg-background">
+    <section id="demo-request" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="max-w-md">

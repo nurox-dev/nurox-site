@@ -204,3 +204,34 @@ export const caseStudies = [
 export const getCaseStudiesAsString = () => {
     return caseStudies.map(cs => `Title: ${cs.title}\nURL: ${cs.url}\nContent: ${cs.content}`).join('\n\n---\n\n');
 }
+
+export const projects = [
+    {
+        title: "E-commerce AI Search",
+        description: "An intelligent search engine for an e-commerce platform that understands natural language queries, leading to a 20% increase in conversion rates.",
+        imageUrl: "https://placehold.co/600x400.png",
+        dataAiHint: "online shopping",
+        tags: ["E-commerce", "AI", "NLP"]
+    },
+    {
+        title: "Healthcare Predictive Maintenance",
+        description: "A system that predicts equipment failure in hospitals, reducing downtime and improving patient care.",
+        imageUrl: "https://placehold.co/600x400.png",
+        dataAiHint: "hospital equipment",
+        tags: ["Healthcare", "Predictive Maintenance", "IoT"]
+    },
+    {
+        title: "Financial Fraud Detection",
+        description: "A real-time fraud detection system for a major bank, which has saved millions by identifying and flagging suspicious transactions.",
+        imageUrl: "https://placehold.co/600x400.png",
+        dataAiHint: "bank security",
+        tags: ["Finance", "Security", "AI"]
+    },
+    {
+        title: "Automated Customer Support",
+        description: "A chatbot for a telecom company that handles 80% of customer queries, improving response times and customer satisfaction.",
+        imageUrl: "https://placehold.co/600x400.png",
+        dataAiHint: "customer service",
+        tags: ["Chatbot", "Customer Support", "Automation"]
+    }
+];

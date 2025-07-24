@@ -21,13 +21,11 @@ export default function Header() {
           <nav className="hidden gap-6 text-sm md:flex">
             <NavLink href="/solutions">Solutions</NavLink>
             <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/demo">Demo</NavLink>
             <NavLink href="#faq">FAQ</NavLink>
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-            <Button asChild className="hidden md:inline-flex rounded-full">
-                <Link href="#demo">Request a Demo</Link>
-            </Button>
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="md:hidden">
@@ -44,11 +42,9 @@ export default function Header() {
                         <nav className="grid gap-4 text-lg">
                             <NavLink href="/solutions">Solutions</NavLink>
                             <NavLink href="/blog">Blog</NavLink>
+                            <NavLink href="/demo">Demo</NavLink>
                             <NavLink href="#faq">FAQ</NavLink>
                         </nav>
-                         <Button asChild className="rounded-full">
-                            <Link href="#demo">Request a Demo</Link>
-                        </Button>
                     </div>
                 </SheetContent>
             </Sheet>
