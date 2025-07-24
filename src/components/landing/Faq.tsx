@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { askCaseStudyFAQ, type AskCaseStudyFAQOutput } from '@/ai/flows/case-study-faq';
 import { getCaseStudiesAsString } from '@/lib/data';
 import { Button } from '@/components/ui/button';
@@ -33,7 +33,7 @@ const initialState = {
 }
 
 export default function Faq() {
-    const [state, formAction] = useFormState(async (previousState, formData: FormData) => {
+    const [state, formAction] = useActionState(async (previousState, formData: FormData) => {
         const question = formData.get('question') as string;
         if (!question || question.length < 10) {
             return { result: null, error: 'Please enter a question with at least 10 characters.' };
