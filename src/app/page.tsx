@@ -1,10 +1,9 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
-import SuccessStories from "@/components/landing/SuccessStories";
-import IntegrationProcess from "@/components/landing/IntegrationProcess";
 import Faq from "@/components/landing/Faq";
 import DemoRequest from "@/components/landing/DemoRequest";
 import Footer from "@/components/landing/Footer";
+import Blog from "@/components/landing/Blog";
 
 export default function Home() {
   return (
@@ -12,8 +11,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <SuccessStories />
-        <IntegrationProcess />
+        <Blog />
         <Faq />
         <DemoRequest />
       </main>
