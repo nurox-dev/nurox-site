@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { useFormState, useFormStatus } from "react-dom";
-import Link from "next/link";
+import { useEffect, useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -32,7 +31,7 @@ const initialState: DemoRequestState = { status: null, message: null };
 
 export default function DemoRequest() {
   const { toast } = useToast();
-  const [state, formAction] = useFormState(submitDemoRequest, initialState);
+  const [state, formAction] = useActionState(submitDemoRequest, initialState);
 
   useEffect(() => {
     if (state.status === "success") {
