@@ -8,8 +8,8 @@ export default function Hero() {
        <Image
           src="https://placehold.co/1920x1080.png"
           alt="Abstract background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{objectFit:"cover"}}
           className="opacity-10"
           data-ai-hint="abstract blue"
         />

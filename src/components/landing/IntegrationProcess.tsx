@@ -22,7 +22,7 @@ export default function IntegrationProcess() {
             {integrationSteps.map((step, index) => (
               <div key={step.step} className="relative flex flex-col items-center text-center p-4 rounded-lg transition-all duration-300 hover:bg-secondary/50">
                 <div className="relative z-10 w-full h-40 mb-4 rounded-lg overflow-hidden">
-                    <Image src={step.imageUrl} alt={step.title} layout="fill" objectFit="cover" data-ai-hint={step.dataAiHint} />
+                    <Image src={step.imageUrl} alt={step.title} fill style={{objectFit:"cover"}} data-ai-hint={step.dataAiHint} />
                     <div className="absolute inset-0 bg-primary/30"></div>
                      <div className="absolute top-4 left-4 flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full text-2xl font-bold border-4 border-background">
                         {step.step}
