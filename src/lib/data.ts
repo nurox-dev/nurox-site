@@ -28,7 +28,7 @@ export const solutions: Solution[] = [
   },
   {
     icon: ScanLine,
-    title: "Automated Document Processing",
+    title: "AI receptionist",
     description: "Extract and process information from documents instantly, reducing manual effort and eliminating errors.",
     detailedDescription: "Turn unstructured documents like invoices, receipts, and contracts into structured, actionable data. Our AI-powered OCR and data extraction tools automate tedious manual entry, reduce human error, and accelerate your document workflows.",
     imageUrl: "https://placehold.co/600x400.png",
