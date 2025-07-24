@@ -4,6 +4,9 @@ export interface Solution {
   icon: LucideIcon;
   title: string;
   description: string;
+  detailedDescription: string;
+  imageUrl: string;
+  dataAiHint: string;
 }
 
 export const solutions: Solution[] = [
@@ -11,21 +14,33 @@ export const solutions: Solution[] = [
     icon: Bot,
     title: "AI-Powered Chatbots",
     description: "Enhance customer engagement with intelligent, 24/7 automated support that learns from every interaction.",
+    detailedDescription: "Our custom-built chatbots go beyond simple scripts. They integrate with your knowledge base, understand user intent, and provide personalized responses. This frees up your human agents to handle high-priority issues, leading to increased efficiency and happier customers.",
+    imageUrl: "https://placehold.co/600x400.png",
+    dataAiHint: "chatbot interface",
   },
   {
     icon: BarChartBig,
     title: "Predictive Analytics",
     description: "Leverage your data to forecast trends, optimize operations, and make proactive, data-driven decisions.",
+    detailedDescription: "Unlock the power of your historical data. Our predictive analytics models can identify patterns and forecast future outcomes related to sales, customer behavior, and operational demand. Make smarter, more confident decisions to stay ahead of the competition.",
+    imageUrl: "https://placehold.co/600x400.png",
+    dataAiHint: "analytics dashboard",
   },
   {
     icon: ScanLine,
     title: "Automated Document Processing",
     description: "Extract and process information from documents instantly, reducing manual effort and eliminating errors.",
+    detailedDescription: "Turn unstructured documents like invoices, receipts, and contracts into structured, actionable data. Our AI-powered OCR and data extraction tools automate tedious manual entry, reduce human error, and accelerate your document workflows.",
+    imageUrl: "https://placehold.co/600x400.png",
+    dataAiHint: "document scanning",
   },
   {
     icon: ShieldCheck,
     title: "Advanced Fraud Detection",
     description: "Protect your business with our AI that identifies and flags suspicious activities in real-time.",
+    detailedDescription: "Safeguard your transactions and customer data with a dynamic, self-learning fraud detection system. Our solution analyzes thousands of data points in real-time to detect and block fraudulent activity before it can impact your business, ensuring trust and security.",
+    imageUrl: "https://placehold.co/600x400.png",
+    dataAiHint: "security shield",
   },
 ];
 
