@@ -29,7 +29,7 @@ export const solutions: Solution[] = [
   {
     icon: BarChartBig,
     title: "Web Development",
-    description: "Leverage your data to forecast trends, optimize operations, and make proactive, data-driven decisions.",
+    description: "Build modern, scalable, and high-performance web applications tailored to your business needs.",
     detailedDescription: "Unlock the power of your historical data. Our predictive analytics models can identify patterns and forecast future outcomes related to sales, customer behavior, and operational demand. Make smarter, more confident decisions to stay ahead of the competition.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "analytics dashboard",
