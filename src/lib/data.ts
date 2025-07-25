@@ -21,8 +21,8 @@ export const solutions: Solution[] = [
   {
     icon: Phone,
     title: "AI Receptionist",
-    description: "Extract and process information from documents instantly, reducing manual effort and eliminating errors.",
-    detailedDescription: "Turn unstructured documents like invoices, receipts, and contracts into structured, actionable data. Our AI-powered OCR and data extraction tools automate tedious manual entry, reduce human error, and accelerate your document workflows.",
+    description: "Automate your front-desk operations with a smart, conversational AI that manages calls and appointments.",
+    detailedDescription: "Our AI Receptionist provides a seamless experience for your customers by handling incoming calls, answering frequently asked questions, and scheduling appointments. It integrates directly with your calendar, ensuring your front desk is efficient and professional 24/7.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "document scanning",
   },
