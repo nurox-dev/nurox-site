@@ -11,20 +11,12 @@ export interface Solution {
 
 export const solutions: Solution[] = [
   {
-    icon: Bot,
-    title: "AI-Powered Chatbots",
-    description: "Enhance customer engagement with intelligent, 24/7 automated support that learns from every interaction.",
-    detailedDescription: "Our custom-built chatbots go beyond simple scripts. They integrate with your knowledge base, understand user intent, and provide personalized responses. This frees up your human agents to handle high-priority issues, leading to increased efficiency and happier customers.",
+    icon: Zap,
+    title: "AI-Powered Automation Workflows",
+    description: "Streamline your unique business processes with tailor-made AI automation solutions for maximum efficiency.",
+    detailedDescription: "We design and implement bespoke AI-driven workflows that automate repetitive tasks, connect disparate systems, and optimize your operations from end to end. From data entry to complex decision-making, our custom solutions are built to fit your specific needs, driving productivity and reducing costs.",
     imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "chatbot interface",
-  },
-  {
-    icon: BarChartBig,
-    title: "Web Development",
-    description: "Leverage your data to forecast trends, optimize operations, and make proactive, data-driven decisions.",
-    detailedDescription: "Unlock the power of your historical data. Our predictive analytics models can identify patterns and forecast future outcomes related to sales, customer behavior, and operational demand. Make smarter, more confident decisions to stay ahead of the competition.",
-    imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "analytics dashboard",
+    dataAiHint: "automation workflow",
   },
   {
     icon: ScanLine,
@@ -35,6 +27,22 @@ export const solutions: Solution[] = [
     dataAiHint: "document scanning",
   },
   {
+    icon: BarChartBig,
+    title: "Web Development",
+    description: "Leverage your data to forecast trends, optimize operations, and make proactive, data-driven decisions.",
+    detailedDescription: "Unlock the power of your historical data. Our predictive analytics models can identify patterns and forecast future outcomes related to sales, customer behavior, and operational demand. Make smarter, more confident decisions to stay ahead of the competition.",
+    imageUrl: "https://placehold.co/600x400.png",
+    dataAiHint: "analytics dashboard",
+  },
+  {
+    icon: Bot,
+    title: "AI-Powered Chatbots",
+    description: "Enhance customer engagement with intelligent, 24/7 automated support that learns from every interaction.",
+    detailedDescription: "Our custom-built chatbots go beyond simple scripts. They integrate with your knowledge base, understand user intent, and provide personalized responses. This frees up your human agents to handle high-priority issues, leading to increased efficiency and happier customers.",
+    imageUrl: "https://placehold.co/600x400.png",
+    dataAiHint: "chatbot interface",
+  },
+  {
     icon: ShieldCheck,
     title: "Maintenance and Continuous Support",
     description: "Protect your business with our AI that identifies and flags suspicious activities in real-time.",
@@ -42,14 +50,6 @@ export const solutions: Solution[] = [
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "security shield",
   },
-  {
-    icon: Zap,
-    title: "AI-Powered Automation Workflows",
-    description: "Streamline your unique business processes with tailor-made AI automation solutions for maximum efficiency.",
-    detailedDescription: "We design and implement bespoke AI-driven workflows that automate repetitive tasks, connect disparate systems, and optimize your operations from end to end. From data entry to complex decision-making, our custom solutions are built to fit your specific needs, driving productivity and reducing costs.",
-    imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "automation workflow",
-  }
 ];
 
 export interface SuccessStory {
