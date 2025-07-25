@@ -1,4 +1,4 @@
-import { Bot, BarChartBig, ScanLine, ShieldCheck, Zap, type LucideIcon } from 'lucide-react';
+import { Bot, BarChartBig, Phone, ShieldCheck, Zap, type LucideIcon } from 'lucide-react';
 
 export interface Solution {
   icon: LucideIcon;
@@ -19,7 +19,7 @@ export const solutions: Solution[] = [
     dataAiHint: "automation workflow",
   },
   {
-    icon: ScanLine,
+    icon: Phone,
     title: "AI Receptionist",
     description: "Extract and process information from documents instantly, reducing manual effort and eliminating errors.",
     detailedDescription: "Turn unstructured documents like invoices, receipts, and contracts into structured, actionable data. Our AI-powered OCR and data extraction tools automate tedious manual entry, reduce human error, and accelerate your document workflows.",
