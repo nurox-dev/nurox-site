@@ -36,7 +36,7 @@ export const solutions: Solution[] = [
   },
   {
     icon: ShieldCheck,
-    title: "Maintenance and Continuous Improvement",
+    title: "Maintenance and Continuous Support",
     description: "Protect your business with our AI that identifies and flags suspicious activities in real-time.",
     detailedDescription: "Safeguard your transactions and customer data with a dynamic, self-learning fraud detection system. Our solution analyzes thousands of data points in real-time to detect and block fraudulent activity before it can impact your business, ensuring trust and security.",
     imageUrl: "https://placehold.co/600x400.png",
@@ -44,7 +44,7 @@ export const solutions: Solution[] = [
   },
   {
     icon: Zap,
-    title: "Custom AI-Powered Automation Workflows",
+    title: "AI-Powered Automation Workflows",
     description: "Streamline your unique business processes with tailor-made AI automation solutions for maximum efficiency.",
     detailedDescription: "We design and implement bespoke AI-driven workflows that automate repetitive tasks, connect disparate systems, and optimize your operations from end to end. From data entry to complex decision-making, our custom solutions are built to fit your specific needs, driving productivity and reducing costs.",
     imageUrl: "https://placehold.co/600x400.png",
