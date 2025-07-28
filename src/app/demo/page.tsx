@@ -22,23 +22,24 @@ export default function DemoPage() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {projects.map((project, index) => (
-                                <Card key={index} className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+                                <Card key={index} className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group bg-card hover:scale-105">
                                     <div className="relative w-full h-64">
                                         <Image
                                             src={project.imageUrl}
                                             alt={project.title}
                                             fill
                                             style={{ objectFit: "cover" }}
-                                            className="transition-transform duration-300 group-hover:scale-105"
+                                            className="transition-transform duration-300 group-hover:scale-110"
                                             data-ai-hint={project.dataAiHint}
                                         />
+                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div className="absolute bottom-0 left-0 p-6">
+                                            <CardTitle className="text-white text-2xl">{project.title}</CardTitle>
+                                        </div>
                                     </div>
-                                    <CardHeader>
-                                        <CardTitle>{project.title}</CardTitle>
-                                        <CardDescription>{project.description}</CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="flex flex-wrap gap-2">
+                                    <CardContent className="flex-grow flex flex-col p-6">
+                                        <CardDescription className="flex-grow">{project.description}</CardDescription>
+                                        <div className="flex flex-wrap gap-2 mt-4">
                                             {project.tags.map(tag => (
                                                 <Badge key={tag} variant="secondary">{tag}</Badge>
                                             ))}
