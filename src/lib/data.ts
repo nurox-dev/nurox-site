@@ -60,45 +60,6 @@ export const solutions: Solution[] = [
   },
 ];
 
-export interface SuccessStory {
-  quote: string;
-  clientName: string;
-  clientCompany: string;
-  avatarUrl: string;
-  dataAiHint: string;
-}
-
-export const successStories: SuccessStory[] = [
-  {
-    quote: "Nurox's predictive analytics transformed our inventory management, reducing waste by 30% and boosting profits.",
-    clientName: "Jane Doe",
-    clientCompany: "Innovate Inc.",
-    avatarUrl: "https://placehold.co/100x100.png",
-    dataAiHint: "woman portrait"
-  },
-  {
-    quote: "The AI chatbot solution improved our customer satisfaction rates by 40% within three months. It's been a game-changer.",
-    clientName: "John Smith",
-    clientCompany: "Tech Solutions Ltd.",
-    avatarUrl: "https://placehold.co/100x100.png",
-    dataAiHint: "man portrait"
-  },
-  {
-    quote: "Automating our document processing with Nurox saved us thousands of hours. Their integration was seamless.",
-    clientName: "Emily White",
-    clientCompany: "Global Logistics",
-    avatarUrl: "https://placehold.co/100x100.png",
-    dataAiHint: "woman smiling"
-  },
-  {
-    quote: "The real-time fraud detection system from Nurox is incredibly effective. It has secured our platform and built trust with our users.",
-    clientName: "Michael Brown",
-    clientCompany: "FinSecure",
-    avatarUrl: "https://placehold.co/100x100.png",
-    dataAiHint: "man professional"
-  },
-];
-
 export interface IntegrationStep {
   step: number;
   title: string;
