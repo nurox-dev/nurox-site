@@ -8,7 +8,7 @@ export default function ProjectsPage() {
         <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-1">
-                <section id="projects" className="py-20 md:py-28 bg-primary/5">
+                <section id="projects" className="py-20 md:py-28 bg-transparent">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">

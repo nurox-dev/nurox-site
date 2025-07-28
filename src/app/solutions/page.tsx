@@ -9,7 +9,7 @@ export default function SolutionsPage() {
         <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-1">
-                 <section id="solutions" className="py-20 md:py-28 bg-background">
+                 <section id="solutions" className="py-20 md:py-28 bg-transparent">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                         <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
@@ -42,7 +42,7 @@ export default function SolutionsPage() {
                                             </div>
                                              <CardDescription className="text-base text-muted-foreground leading-relaxed">
                                                 {solution.description}
-                                            </CardDescription>
+                                             </CardDescription>
                                         </CardHeader>
                                         <CardContent>
                                             <p className="text-foreground/90">{solution.detailedDescription}</p>

@@ -10,7 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-20 md:py-28 bg-primary/5">
+    <section id="blog" className="py-20 md:py-28 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">

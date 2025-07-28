@@ -11,7 +11,7 @@ export default function Solutions() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="solutions" className="py-20 md:py-28 bg-primary/5" ref={ref}>
+    <section id="solutions" className="py-20 md:py-28 bg-transparent" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">

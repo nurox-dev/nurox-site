@@ -3,7 +3,7 @@ import { projects } from "@/lib/data";
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-20 md:py-28 bg-background">
+        <section id="projects" className="py-20 md:py-28 bg-transparent">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
