@@ -16,7 +16,7 @@ export default function SuccessStories() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            Driving Real Results for Our Clients
+            Our Work
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Don't just take our word for it. See how we've helped businesses like yours succeed.
