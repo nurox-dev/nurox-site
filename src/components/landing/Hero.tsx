@@ -13,13 +13,13 @@ export default function Hero() {
           data-ai-hint="robot assistant"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl text-white">
+          <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]">
             Automate Your Business With AI
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/80">
+          <p className="mt-6 text-lg md:text-xl text-white/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]">
             Nurox delivers cutting-edge AI solutions that automate processes,
             uncover insights, and create new opportunities for your business.
           </p>
