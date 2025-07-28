@@ -21,7 +21,7 @@ export const solutions: Solution[] = [
   {
     icon: Globe,
     title: "Web Development",
-    description: "Build modern, scalable, and high-performance web applications tailored to your business needs.",
+    description: "Modern website with sleek design, built for your business.",
     detailedDescription: "Our expert team provides end-to-end web development services, from initial concept to deployment and beyond. We build responsive, secure, and user-friendly websites and applications that deliver a superior digital experience and drive business growth.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "analytics dashboard",
