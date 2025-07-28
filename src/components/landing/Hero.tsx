@@ -15,7 +15,7 @@ export default function Hero() {
             uncover insights, and create new opportunities for your business.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="rounded-full" variant="glass">
               <Link href="/solutions">Contact Us</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full shadow-lg hover:shadow-xl transition-shadow">

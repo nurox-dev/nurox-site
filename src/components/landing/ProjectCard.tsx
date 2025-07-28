@@ -29,12 +29,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     if (isHovered) {
       intervalRef.current = setInterval(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % project.imageUrls.length);
-      }, 1500); // Change image every 1.5 seconds
+      }, 1500);
     } else {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
-      setCurrentImageIndex(0); // Reset to the first image when not hovered
+      setCurrentImageIndex(0);
     }
 
     return () => {
@@ -63,6 +63,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             )}
             data-ai-hint={project.dataAiHint}
+            priority={index === 0}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
