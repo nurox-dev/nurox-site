@@ -11,8 +11,8 @@ const NavLink = ({ href, children }: { href: string, children: React.ReactNode }
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full p-2">
-      <div className="container flex h-14 max-w-screen-2xl items-center rounded-2xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg">
+    <header className="sticky top-0 z-50 w-full">
+      <div className="container flex h-14 max-w-screen-2xl items-center rounded-b-2xl border-x border-b border-white/20 bg-white/10 backdrop-blur-lg shadow-lg">
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Mountain className="h-6 w-6 text-primary" />
