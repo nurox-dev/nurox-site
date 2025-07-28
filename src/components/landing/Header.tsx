@@ -22,7 +22,7 @@ export default function Header() {
             <NavLink href="/demo">Demo</NavLink>
             <NavLink href="/solutions">Solutions</NavLink>
             <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="#faq">FAQ</NavLink>
+            <NavLink href="#success-stories">Success Stories</NavLink>
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
@@ -46,7 +46,7 @@ export default function Header() {
                             <NavLink href="/demo">Demo</NavLink>
                             <NavLink href="/solutions">Solutions</NavLink>
                             <NavLink href="/blog">Blog</NavLink>
-                            <NavLink href="#faq">FAQ</NavLink>
+                            <NavLink href="#success-stories">Success Stories</NavLink>
                              <Button asChild>
                                 <Link href="#demo-request">Request a Demo</Link>
                              </Button>
