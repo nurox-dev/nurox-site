@@ -1,32 +1,22 @@
 "use client";
 
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { solutions } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export default function Solutions() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
   return (
-    <section id="solutions" className="py-20 md:py-28 bg-transparent" ref={ref}>
+    <section id="solutions" className="py-20 md:py-28 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-           AI Solutions for Your Business
+            Our Services      
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className={cn(
-                "transition-all duration-700 ease-out",
-                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              )}
-              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <Card className="text-center transition-all duration-300 hover:-translate-y-2 h-full bg-gradient-to-br from-green-500/20 to-purple-500/20 backdrop-blur-lg border-white/20 shadow-lg hover:shadow-2xl hover:from-green-500/30 hover:to-purple-500/30">
                 <CardHeader className="items-center">
