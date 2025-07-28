@@ -75,6 +75,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-image: linear-gradient(to bottom right, hsl(221, 44%, 95%), hsl(221, 50%, 90%));
   }
 }
