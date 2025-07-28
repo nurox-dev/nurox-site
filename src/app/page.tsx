@@ -4,7 +4,6 @@ import Solutions from "@/components/landing/Solutions";
 import Faq from "@/components/landing/Faq";
 import Footer from "@/components/landing/Footer";
 import Blog from "@/components/landing/Blog";
-import Demos from "@/components/landing/Demos";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Solutions />
-        <Demos />
         <Blog />
         <Faq />
       </main>
