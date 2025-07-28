@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl [text-shadow:0_4px_8px_rgba(0,0,0,0.7)]">
+          <h1 className="text-4xl font-extrabold tracking-tight text-green-200 md:text-5xl lg:text-6xl [text-shadow:0_4px_8px_rgba(0,0,0,0.7)]">
             Automate Your Business With AI
           </h1>
           <p className="mt-6 text-lg text-white/90 md:text-xl [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]">
