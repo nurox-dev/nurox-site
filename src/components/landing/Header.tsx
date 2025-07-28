@@ -11,8 +11,8 @@ const NavLink = ({ href, children }: { href: string, children: React.ReactNode }
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+    <header className="sticky top-0 z-50 w-full p-4">
+      <div className="container flex h-14 max-w-screen-2xl items-center rounded-2xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg">
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Mountain className="h-6 w-6 text-primary" />
@@ -26,7 +26,7 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-           <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 hidden md:flex">
+           <Button asChild className="hidden md:flex">
               <Link href="#demo-request">Request a Demo</Link>
             </Button>
             <Sheet>
@@ -47,7 +47,7 @@ export default function Header() {
                             <NavLink href="/solutions">Solutions</NavLink>
                             <NavLink href="/blog">Blog</NavLink>
                             <NavLink href="#faq">FAQ</NavLink>
-                             <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90">
+                             <Button asChild>
                                 <Link href="#demo-request">Request a Demo</Link>
                              </Button>
                         </nav>
