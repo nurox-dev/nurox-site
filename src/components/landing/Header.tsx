@@ -26,6 +26,9 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
+           <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90 hidden md:flex">
+              <Link href="#demo-request">Request a Demo</Link>
+            </Button>
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="md:hidden">
@@ -44,6 +47,9 @@ export default function Header() {
                             <NavLink href="/solutions">Solutions</NavLink>
                             <NavLink href="/blog">Blog</NavLink>
                             <NavLink href="#faq">FAQ</NavLink>
+                             <Button asChild className="rounded-full bg-accent text-accent-foreground hover:bg-accent/90">
+                                <Link href="#demo-request">Request a Demo</Link>
+                             </Button>
                         </nav>
                     </div>
                 </SheetContent>
