@@ -53,8 +53,8 @@ export const solutions: Solution[] = [
   {
     icon: ShieldCheck,
     title: "Maintenance and Continuous Support",
-    description: "Protect your business with our AI that identifies and flags suspicious activities in real-time.",
-    detailedDescription: "We provide comprehensive maintenance and support packages to ensure your solutions remain secure, up-to-date, and optimized for performance. Our team is dedicated to your long-term success, offering proactive monitoring and continuous improvement to adapt to your evolving needs.",
+    description: "We provide comprehensive maintenance and support packages to ensure your solutions remain secure, up-to-date, and optimized for performance. Our team is dedicated to your long-term success, offering proactive monitoring and continuous improvement to adapt to your evolving needs.",
+    detailedDescription: "Our commitment doesn't end at launch. We provide comprehensive maintenance and support packages to ensure your solutions remain secure, up-to-date, and optimized for peak performance. Our dedicated team offers proactive monitoring and continuous improvement, adapting to your evolving needs and ensuring your long-term success.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "security shield",
   },
