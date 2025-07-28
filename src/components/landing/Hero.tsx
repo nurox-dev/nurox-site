@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg" className="rounded-full shadow-lg hover:shadow-xl transition-shadow">
-              <Link href="#demo">Request a Demo</Link>
+              <Link href="#demo-request">Contact Us</Link>
             </Button>
             <Button asChild size="lg" variant="secondary" className="rounded-full bg-card hover:bg-card/90 shadow-lg hover:shadow-xl transition-shadow">
               <Link href="/solutions">Learn More</Link>
