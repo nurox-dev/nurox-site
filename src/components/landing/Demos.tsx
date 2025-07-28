@@ -38,11 +38,6 @@ export default function Demos() {
                            
                             <CardContent className="flex-grow flex flex-col p-6">
                                 <CardDescription className="flex-grow">{project.description}</CardDescription>
-                                <div className="flex flex-wrap gap-2 mt-4">
-                                    {project.tags.map(tag => (
-                                        <Badge key={tag} variant="secondary">{tag}</Badge>
-                                    ))}
-                                </div>
                                 <Button asChild className="mt-6 self-start">
                                     <Link href="/demo">
                                         View Project <ArrowRight className="ml-2 h-4 w-4" />
