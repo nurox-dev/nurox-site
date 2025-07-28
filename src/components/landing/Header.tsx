@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Mountain } from "lucide-react";
 import Link from "next/link";
@@ -25,15 +24,12 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-           <Button asChild className="hidden md:flex">
-              <Link href="#demo-request">Request a Demo</Link>
-            </Button>
             <Sheet>
                 <SheetTrigger asChild>
-                    <Button variant="outline" size="icon" className="md:hidden">
+                    <button className="md:hidden p-2">
                         <Menu className="h-5 w-5" />
                         <span className="sr-only">Toggle Menu</span>
-                    </Button>
+                    </button>
                 </SheetTrigger>
                 <SheetContent side="right">
                     <div className="grid gap-6 p-6">
@@ -45,9 +41,6 @@ export default function Header() {
                             <NavLink href="/demo">Demo</NavLink>
                             <NavLink href="/solutions">Solutions</NavLink>
                             <NavLink href="/blog">Blog</NavLink>
-                             <Button asChild>
-                                <Link href="#demo-request">Request a Demo</Link>
-                             </Button>
                         </nav>
                     </div>
                 </SheetContent>

@@ -3,7 +3,6 @@ import Hero from "@/components/landing/Hero";
 import Solutions from "@/components/landing/Solutions";
 import Footer from "@/components/landing/Footer";
 import Blog from "@/components/landing/Blog";
-import DemoRequest from "@/components/landing/DemoRequest";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <Hero />
         <Solutions />
         <Blog />
-        <DemoRequest />
       </main>
       <Footer />
     </div>
