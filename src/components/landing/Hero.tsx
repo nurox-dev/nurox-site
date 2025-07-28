@@ -19,7 +19,7 @@ export default function Hero() {
           <h1 className="text-4xl font-extrabold tracking-tight text-green-300 md:text-5xl lg:text-6xl [text-shadow:0_4px_8px_rgba(0,0,0,0.7)]">
             Automate Your Business With AI
           </h1>
-          <p className="mt-6 text-lg text-white/90 md:text-xl [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]">
+          <p className="mt-6 text-lg text-green-200 md:text-xl [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]">
             Nurox powers your business behind the scenes, so your sales shine out front.
           </p>
           <div className="mt-8 flex justify-center gap-4">

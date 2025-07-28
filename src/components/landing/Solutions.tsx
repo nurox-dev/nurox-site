@@ -15,11 +15,8 @@ export default function Solutions() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            Tailored AI Solutions for Your Business
+           AI Solutions for Your Business
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            We solve complex challenges with powerful, purpose-built AI technologies.
-          </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {solutions.map((solution, index) => (
