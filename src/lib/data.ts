@@ -43,6 +43,14 @@ export const solutions: Solution[] = [
     dataAiHint: "chatbot interface",
   },
   {
+    icon: Zap,
+    title: "AI-Powered Automation Workflows",
+    description: "Streamline your unique business processes with tailor-made AI automation solutions for maximum efficiency.",
+    detailedDescription: "We identify bottlenecks and repetitive tasks in your operations and build custom AI-driven workflows to automate them. From data entry and processing to complex decision-making, our solutions are designed to save you time, reduce errors, and free up your team to focus on high-value activities.",
+    imageUrl: "https://placehold.co/600x400.png",
+    dataAiHint: "automation process",
+  },
+  {
     icon: ShieldCheck,
     title: "Maintenance and Continuous Support",
     description: "Protect your business with our AI that identifies and flags suspicious activities in real-time.",
