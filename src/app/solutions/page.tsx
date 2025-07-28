@@ -21,7 +21,7 @@ export default function SolutionsPage() {
                         </div>
                         <div className="grid grid-cols-1 gap-12">
                             {solutions.map((solution, index) => (
-                                <Card key={solution.title} className="flex flex-col md:flex-row overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                                <Card key={solution.title} className="flex flex-col md:flex-row overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
                                     <div className="w-full md:w-1/3 relative min-h-[250px] md:min-h-0">
                                          <Image 
                                             src={solution.imageUrl} 

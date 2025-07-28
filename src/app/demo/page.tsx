@@ -22,7 +22,7 @@ export default function DemoPage() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {projects.map((project, index) => (
-                                <Card key={index} className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                                <Card key={index} className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
                                     <div className="relative w-full h-64">
                                         <Image
                                             src={project.imageUrl}
