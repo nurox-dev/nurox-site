@@ -11,14 +11,6 @@ export interface Solution {
 
 export const solutions: Solution[] = [
   {
-    icon: Zap,
-    title: "AI-Powered Automation Workflows",
-    description: "Streamline your unique business processes with tailor-made AI automation solutions for maximum efficiency.",
-    detailedDescription: "We design and implement bespoke AI-driven workflows that automate repetitive tasks, connect disparate systems, and optimize your operations from end to end. From data entry to complex decision-making, our custom solutions are built to fit your specific needs, driving productivity and reducing costs.",
-    imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "automation workflow",
-  },
-  {
     icon: Phone,
     title: "AI Receptionist",
     description: "Automate your front-desk operations with a smart, conversational AI that manages calls and appointments.",
