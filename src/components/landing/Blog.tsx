@@ -24,7 +24,7 @@ export default function Blog() {
           {blogPosts.map((post, index) => (
             <Card key={index} className="flex flex-col overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="p-0">
-                <Link href="#" className="block relative w-full h-56">
+                <Link href={`/blog/${post.slug}`} className="block relative w-full h-56">
                   <Image
                     src={post.imageUrl}
                     alt={post.title}
@@ -38,7 +38,7 @@ export default function Blog() {
               <CardContent className="p-6 flex-grow">
                 <Badge variant="secondary" className="mb-2">{post.category}</Badge>
                 <CardTitle className="text-xl mb-2 leading-snug">
-                  <Link href="#" className="hover:text-primary transition-colors">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
                     {post.title}
                   </Link>
                 </CardTitle>
@@ -58,7 +58,7 @@ export default function Blog() {
                     </div>
                 </div>
                 <Button variant="outline" size="icon" asChild>
-                    <Link href="#">
+                    <Link href={`/blog/${post.slug}`}>
                         <ArrowRight className="h-4 w-4" />
                     </Link>
                 </Button>
