@@ -31,7 +31,7 @@ export default function Solutions() {
               )}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <Card className="text-center transition-all duration-300 hover:-translate-y-2 h-full bg-accent/20 backdrop-blur-lg border-white/20 hover:shadow-2xl hover:bg-accent/30">
+              <Card className="text-center transition-all duration-300 hover:-translate-y-2 h-full bg-purple-500/10 backdrop-blur-lg border-white/20 hover:shadow-2xl hover:bg-purple-500/20">
                 <CardHeader className="items-center">
                   <div className="p-4 bg-primary/10 rounded-full mb-4">
                     <solution.icon className="h-8 w-8 text-primary" />
