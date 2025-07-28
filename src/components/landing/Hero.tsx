@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative bg-primary/10 py-20 md:py-32">
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight text-primary md:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-orange-500 md:text-5xl lg:text-6xl">
             Unlock Business Growth with Intelligent AI
           </h1>
           <p className="mt-6 text-lg md:text-xl text-foreground/80">
