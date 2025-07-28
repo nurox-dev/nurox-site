@@ -13,7 +13,7 @@ export default function Hero() {
           data-ai-hint="robot assistant"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+        <div className="absolute inset-0" />
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-extrabold tracking-tight text-green-300 md:text-5xl lg:text-6xl [text-shadow:0_4px_8px_rgba(0,0,0,0.7)]">
