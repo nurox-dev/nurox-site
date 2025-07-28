@@ -13,7 +13,7 @@ export const solutions: Solution[] = [
   {
     icon: Phone,
     title: "AI Receptionist",
-    description: "Automate your front-desk operations with a smart, conversational AI that manages calls and appointments.",
+    description: "Let AI handle your front desk – from calls to appointments and bookings, effortlessly!",
     detailedDescription: "Our AI Receptionist provides a seamless experience for your customers by handling incoming calls, answering frequently asked questions, and scheduling appointments. It integrates directly with your calendar, ensuring your front desk is efficient and professional 24/7.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "document scanning",
