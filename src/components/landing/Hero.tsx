@@ -20,8 +20,7 @@ export default function Hero() {
             Automate Your Business With AI
           </h1>
           <p className="mt-6 text-lg text-white/90 md:text-xl [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]">
-            Nurox delivers cutting-edge AI solutions that automate processes,
-            uncover insights, and create new opportunities for your business.
+            Nurox powers your business behind the scenes, so your sales shine out front.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg" className="rounded-full" variant="glass">

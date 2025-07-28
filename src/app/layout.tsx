@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Nurox - Your Partner in AI Innovation",
-  description: "Nurox provides cutting-edge AI solutions to transform your business.",
+  title: "Nurox | AI-Powered Business Automation",
+  description: "Nurox powers your business with AI to automate processes and boost sales. Let our technology work behind the scenes so your success can shine.",
 };
 
 export default function RootLayout({
