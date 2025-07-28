@@ -48,9 +48,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <Card
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group bg-card hover:scale-105"
+      className="flex flex-col overflow-hidden transition-all duration-300 group bg-card/60 backdrop-blur-lg border-white/20 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1 hover:scale-105"
     >
-      <div className="relative w-full h-64 overflow-hidden">
+      <div className="relative w-full h-64 overflow-hidden rounded-t-lg">
         {project.imageUrls.map((url, index) => (
           <Image
             key={index}
