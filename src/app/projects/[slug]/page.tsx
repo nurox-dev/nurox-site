@@ -21,7 +21,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         <div className="container mx-auto px-4 max-w-6xl">
             <header className="mb-8 md:mb-12">
                 <Button asChild variant="outline" className='mb-8'>
-                    <Link href="/demo" className='flex items-center gap-2'>
+                    <Link href="/projects" className='flex items-center gap-2'>
                         <ArrowLeft className="h-4 w-4" />
                         Back to All Projects
                     </Link>

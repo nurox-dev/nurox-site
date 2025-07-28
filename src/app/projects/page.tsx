@@ -3,12 +3,12 @@ import Header from "@/components/landing/Header";
 import ProjectCard from "@/components/landing/ProjectCard";
 import { projects } from "@/lib/data";
 
-export default function DemoPage() {
+export default function ProjectsPage() {
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-1">
-                <section id="demo" className="py-20 md:py-28 bg-primary/5">
+                <section id="projects" className="py-20 md:py-28 bg-primary/5">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
