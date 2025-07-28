@@ -1,4 +1,4 @@
-import { Bot, BarChartBig, Phone, ShieldCheck, Zap, Smartphone, type LucideIcon } from 'lucide-react';
+import { Bot, BarChartBig, Phone, ShieldCheck, Zap, Smartphone, Globe, type LucideIcon } from 'lucide-react';
 
 export interface Solution {
   icon: LucideIcon;
@@ -27,7 +27,7 @@ export const solutions: Solution[] = [
     dataAiHint: "document scanning",
   },
   {
-    icon: BarChartBig,
+    icon: Globe,
     title: "Web Development",
     description: "Build modern, scalable, and high-performance web applications tailored to your business needs.",
     detailedDescription: "Our expert team provides end-to-end web development services, from initial concept to deployment and beyond. We build responsive, secure, and user-friendly websites and applications that deliver a superior digital experience and drive business growth.",
