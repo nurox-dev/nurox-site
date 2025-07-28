@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative bg-transparent py-20 md:py-32">
        <Image
-          src="https://i.imgur.com/gOk4G0k.png"
+          src="https://placehold.co/1920x1080.png"
           alt="AI assistant working at a desk"
           fill
           className="object-cover"
