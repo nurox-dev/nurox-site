@@ -11,7 +11,7 @@ const NavLink = ({ href, children }: { href: string, children: React.ReactNode }
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-2xl bg-black/20">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-primary/10 backdrop-blur supports-[backdrop-filter]:bg-primary/5 rounded-b-2xl">
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="flex items-center md:hidden">
             <Link href="/" className="flex items-center space-x-2">
