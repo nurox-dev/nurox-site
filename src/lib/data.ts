@@ -149,7 +149,7 @@ By taking care of the day-to-day, automation allows you, the business owner, to 
         category: "Business Strategy",
         date: "July 28, 2024",
         author: {
-            name: "Alex Johnson",
+            name: "Anish Adhikari",
             avatarUrl: "https://placehold.co/100x100.png"
         }
     },
@@ -187,7 +187,7 @@ With the growing power of AI comes a greater responsibility to use it ethically.
         category: "AI Trends",
         date: "July 24, 2024",
         author: {
-            name: "Alex Johnson",
+            name: "Anish Adhikari",
             avatarUrl: "https://placehold.co/100x100.png"
         }
     },
