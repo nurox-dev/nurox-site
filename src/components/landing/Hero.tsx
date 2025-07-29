@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative bg-transparent py-20 md:py-32">
        <Image
-          src="/images/landingbg.jpg"
+          src="/images/homebg.jpg"
           alt="AI assistant working at a desk"
           fill
           className="object-cover"
