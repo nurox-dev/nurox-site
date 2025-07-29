@@ -15,7 +15,7 @@ export default function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Mountain className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block text-lg text-primary">Nurox</span>
+            <span className="font-bold sm:inline-block text-lg text-primary">Nurox.dev</span>
           </Link>
           <nav className="hidden gap-6 text-sm md:flex">
             <NavLink href="/projects">Projects</NavLink>
@@ -35,7 +35,7 @@ export default function Header() {
                     <div className="grid gap-6 p-6">
                         <Link href="/" className="flex items-center space-x-2">
                             <Mountain className="h-6 w-6 text-primary" />
-                            <span className="font-bold text-lg text-primary">Nurox</span>
+                            <span className="font-bold text-lg text-primary">Nurox.dev</span>
                         </Link>
                         <nav className="grid gap-4 text-lg">
                             <NavLink href="/projects">Projects</NavLink>
