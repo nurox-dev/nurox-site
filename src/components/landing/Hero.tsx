@@ -27,9 +27,6 @@ export default function Hero() {
             <Button asChild size="lg" className="rounded-full" variant="glass">
               <Link href="/solutions">Contact Us</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="rounded-full shadow-lg hover:shadow-xl transition-shadow">
-              <Link href="/solutions">Learn More</Link>
-            </Button>
           </div>
         </div>
       </div>
