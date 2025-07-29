@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative bg-transparent py-20 md:py-32">
        <Image
-          src="/images/homebg.jpg"
+          src="/images/homebg.jpeg"
           alt="AI assistant working at a desk"
           fill
           className="object-cover"
