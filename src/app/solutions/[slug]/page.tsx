@@ -27,13 +27,18 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                         Back to All Solutions
                     </Link>
                 </Button>
-                 <div className="flex items-center gap-4 mb-6">
-                    <div className="p-4 bg-primary/10 rounded-full">
+                 <div className="flex items-start gap-6 mb-6">
+                    <div className="p-4 bg-primary/10 rounded-full mt-1">
                         <solution.icon className="h-10 w-10 text-primary" />
                     </div>
-                    <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
-                    {solution.title}
-                    </h1>
+                    <div>
+                        <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+                        {solution.title}
+                        </h1>
+                        <p className="mt-4 text-xl text-muted-foreground max-w-3xl">
+                            {solution.description}
+                        </p>
+                    </div>
                 </div>
             </header>
             
