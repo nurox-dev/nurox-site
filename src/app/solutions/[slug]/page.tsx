@@ -35,9 +35,6 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                         <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
                         {solution.title}
                         </h1>
-                        <p className="mt-4 text-xl text-muted-foreground max-w-3xl">
-                            {solution.description}
-                        </p>
                     </div>
                 </div>
             </header>
@@ -55,10 +52,15 @@ export default function SolutionDetailPage({ params }: { params: { slug: string 
                     sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 </div>
-                <div className="text-lg text-foreground/90 leading-relaxed space-y-4">
-                    <p>
-                        {solution.detailedDescription}
+                <div className="space-y-6">
+                    <p className="text-xl text-muted-foreground">
+                        {solution.description}
                     </p>
+                    <div className="text-lg text-foreground/90 leading-relaxed space-y-4">
+                        <p>
+                            {solution.detailedDescription}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
