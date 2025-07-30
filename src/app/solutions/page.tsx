@@ -31,7 +31,7 @@ export default function SolutionsPage() {
                                             <CardTitle>{solution.title}</CardTitle>
                                         </CardHeader>
                                         <div className="flex justify-end items-end mt-4">
-                                            <ArrowRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <ArrowRight className="h-5 w-5 text-primary transition-opacity duration-300" />
                                         </div>
                                     </Card>
                                 </Link>
