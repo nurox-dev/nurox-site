@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -9,6 +10,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Blog() {
+  const latestPosts = blogPosts.slice(0, 3);
+
   return (
     <section id="blog" className="py-20 md:py-28 bg-transparent">
       <div className="container mx-auto px-4">
@@ -21,7 +24,7 @@ export default function Blog() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
+          {latestPosts.map((post, index) => (
             <Card key={index} className="flex flex-col overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="p-0">
                 <Link href={`/blog/${post.slug}`} className="block relative w-full h-56">
