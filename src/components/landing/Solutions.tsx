@@ -2,7 +2,6 @@
 
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { solutions } from "@/lib/solutions";
-import { cn } from "@/lib/utils";
 
 export default function Solutions() {
   return (
@@ -14,7 +13,7 @@ export default function Solutions() {
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {solutions.map((solution, index) => (
+          {solutions.map((solution) => (
             <div
               key={solution.title}
             >

@@ -2,7 +2,6 @@ import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import { solutions } from "@/lib/solutions";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import Image from "next/image";
 
 export default function SolutionsPage() {
     return (
@@ -19,35 +18,19 @@ export default function SolutionsPage() {
                             We provide a suite of intelligent tools designed to solve your most complex business challenges, drive efficiency, and unlock new opportunities for growth.
                         </p>
                         </div>
-                        <div className="grid grid-cols-1 gap-12">
-                            {solutions.map((solution, index) => (
-                                <Card key={solution.title} className="flex flex-col md:flex-row overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
-                                    <div className="w-full md:w-1/3 relative min-h-[250px] md:min-h-0">
-                                         <Image 
-                                            src={solution.imageUrl} 
-                                            alt={solution.title}
-                                            fill
-                                            style={{ objectFit: "cover" }}
-                                            className="transition-transform duration-300 group-hover:scale-105"
-                                            data-ai-hint={solution.dataAiHint}
-                                        />
-                                    </div>
-                                    <div className="w-full md:w-2/3">
-                                        <CardHeader>
-                                            <div className="flex items-center gap-4 mb-2">
-                                                <div className="p-3 bg-primary/10 rounded-full">
-                                                    <solution.icon className="h-6 w-6 text-primary" />
-                                                </div>
-                                                <CardTitle className="text-2xl">{solution.title}</CardTitle>
-                                            </div>
-                                             <CardDescription className="text-base text-muted-foreground leading-relaxed">
-                                                {solution.description}
-                                             </CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="text-foreground/90">{solution.detailedDescription}</p>
-                                        </CardContent>
-                                    </div>
+                        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            {solutions.map((solution) => (
+                                <Card key={solution.title} className="text-center transition-all duration-300 hover:-translate-y-2 h-full bg-gradient-to-br from-green-500/20 to-purple-500/20 backdrop-blur-lg border-white/20 shadow-lg hover:shadow-2xl hover:from-green-500/30 hover:to-purple-500/30">
+                                    <CardHeader className="items-center">
+                                      <div className="p-4 bg-primary/10 rounded-full mb-4">
+                                        <solution.icon className="h-8 w-8 text-primary" />
+                                      </div>
+                                      <CardTitle>{solution.title}</CardTitle>
+                                      <CardDescription className="pt-2">{solution.description}</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-foreground/90 text-sm">{solution.detailedDescription}</p>
+                                    </CardContent>
                                 </Card>
                             ))}
                         </div>
