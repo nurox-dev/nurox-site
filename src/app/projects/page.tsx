@@ -1,7 +1,7 @@
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import ProjectCard from "@/components/landing/ProjectCard";
-import { projects } from "@/lib/data";
+import { projects } from "@/lib/data/projects";
 
 export default function ProjectsPage() {
     return (

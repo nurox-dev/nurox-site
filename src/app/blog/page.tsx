@@ -1,6 +1,6 @@
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
-import { blogPosts } from "@/lib/data";
+import { blogPosts } from "@/lib/data/blog";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";

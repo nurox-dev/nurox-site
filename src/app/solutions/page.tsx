@@ -1,6 +1,6 @@
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
-import { solutions } from "@/lib/data";
+import { solutions } from "@/lib/data/solutions";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 
