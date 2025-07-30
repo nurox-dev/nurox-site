@@ -29,7 +29,6 @@ export default function SolutionsPage() {
                                       <CardDescription className="pt-2">{solution.description}</CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <p className="text-foreground/90 text-sm">{solution.detailedDescription}</p>
                                     </CardContent>
                                 </Card>
                             ))}
