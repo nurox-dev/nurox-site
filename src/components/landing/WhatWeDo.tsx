@@ -9,7 +9,7 @@ export default function WhatWeDo() {
         </div>
         <div className="max-w-4xl mx-auto">
           <blockquote className="text-center text-2xl md:text-3xl font-medium text-foreground/90 italic border-l-4 border-primary pl-6 md:pl-8">
-            We automate calls, appointment booking, general inquiry and bring more consumers to you with insane efficiency.
+            "We automate calls, appointment bookings, and general inquiries— potentially bringing more consumers to you with exceptional efficiency."
           </blockquote>
         </div>
       </div>
