@@ -30,10 +30,10 @@ export default function Solutions() {
                     <Link href="/solutions" className="block h-full group">
                         <Card className="flex flex-col text-center justify-center items-center transition-all duration-300 group-hover:-translate-y-2 h-full bg-gradient-to-br from-green-500/20 to-purple-500/20 backdrop-blur-lg border-white/20 shadow-lg group-hover:shadow-2xl group-hover:from-green-500/30 group-hover:to-purple-500/30 p-4 md:p-6">
                             <CardHeader className="items-center p-0">
-                                <CardTitle className="text-base md:text-lg mb-3">View More</CardTitle>
-                                <div className="p-3 bg-primary/10 rounded-full">
+                                <div className="p-3 bg-primary/10 rounded-full mb-3">
                                     <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                                 </div>
+                                <CardTitle className="text-base md:text-lg">View More</CardTitle>
                             </CardHeader>
                         </Card>
                     </Link>
