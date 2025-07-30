@@ -28,6 +28,7 @@ export default function Header() {
             <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/solutions">Solutions</NavLink>
             <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/demo">Demo</NavLink>
           </nav>
         </div>
         
@@ -54,6 +55,7 @@ export default function Header() {
                                 <NavLink href="/projects">Projects</NavLink>
                                 <NavLink href="/solutions">Solutions</NavLink>
                                 <NavLink href="/blog">Blog</NavLink>
+                                <NavLink href="/demo">Demo</NavLink>
                             </nav>
                         </div>
                     </SheetContent>
