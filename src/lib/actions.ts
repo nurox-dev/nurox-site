@@ -5,7 +5,7 @@ import { z } from "zod";
 const demoRequestSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }).optional(),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
 export type DemoRequestState = {
@@ -28,8 +28,10 @@ export async function submitDemoRequest(
   });
 
   if (!validatedFields.success) {
+    const fieldErrors = validatedFields.error.flatten().fieldErrors;
+    const firstError = Object.values(fieldErrors).flat()[0] || "Invalid data provided.";
     return {
-      message: validatedFields.error.flatten().fieldErrors.email?.[0] || validatedFields.error.flatten().fieldErrors.name?.[0] || "Invalid data.",
+      message: firstError,
       status: "error",
     };
   }

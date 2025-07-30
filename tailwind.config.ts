@@ -98,15 +98,16 @@ export default {
             height: '0',
           },
         },
-        'fade-in': {
-            '0%': { opacity: '0' },
-            '100%': { opacity: '1' },
+        'animated-gradient': {
+            '0%': { backgroundPosition: '0% 50%' },
+            '50%': { backgroundPosition: '100% 50%' },
+            '100%': { backgroundPosition: '0% 50%' },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in': 'fade-in 0.5s ease-in-out',
+        'animated-gradient': 'animated-gradient 15s ease infinite',
       },
     },
   },

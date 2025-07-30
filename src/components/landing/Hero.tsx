@@ -1,12 +1,10 @@
-
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-transparent py-20 md:py-32">
+    <section className="relative bg-transparent py-20 md:py-32 overflow-hidden">
        <Image
           src="/images/homebg.jpeg"
           alt="AI assistant working at a desk"
@@ -15,7 +13,7 @@ export default function Hero() {
           data-ai-hint="robot assistant"
           priority
         />
-        <div className="absolute inset-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-green-500/40 animate-[animated-gradient_15s_ease_infinite] bg-[length:400%_400%]" />
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-extrabold tracking-tight text-primary-foreground md:text-5xl lg:text-6xl [text-shadow:0_4px_12px_rgba(0,0,0,0.8)]">

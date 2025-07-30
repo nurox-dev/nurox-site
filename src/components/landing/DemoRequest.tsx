@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useActionState } from "react";
-import { useFormStatus } from "react-dom";
+import { useEffect, useRef } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -31,7 +31,8 @@ const initialState: DemoRequestState = { status: null, message: null };
 
 export default function DemoRequest() {
   const { toast } = useToast();
-  const [state, formAction] = useActionState(submitDemoRequest, initialState);
+  const [state, formAction] = useFormState(submitDemoRequest, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     if (state.status === "success") {
@@ -39,6 +40,7 @@ export default function DemoRequest() {
         title: "Success!",
         description: state.message,
       });
+      formRef.current?.reset();
     } else if (state.status === "error") {
       toast({
         title: "Error",
@@ -49,7 +51,7 @@ export default function DemoRequest() {
   }, [state, toast]);
 
   return (
-    <section id="demo-request" className="py-20 md:py-28 bg-background">
+    <section id="demo-request" className="py-20 md:py-28 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="max-w-md">
@@ -64,7 +66,7 @@ export default function DemoRequest() {
             </p>
           </div>
           <div>
-            <Card className="shadow-xl">
+            <Card className="shadow-xl bg-card/60 backdrop-blur-lg border-white/20">
               <CardHeader>
                 <CardTitle>Request a Demo</CardTitle>
                 <CardDescription>
@@ -72,7 +74,7 @@ export default function DemoRequest() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form action={formAction} className="space-y-4">
+                <form ref={formRef} action={formAction} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name</Label>
                     <Input id="name" name="name" placeholder="John Doe" required />
@@ -82,8 +84,8 @@ export default function DemoRequest() {
                     <Input id="email" name="email" type="email" placeholder="john.doe@company.com" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Tell us about your needs (optional)</Label>
-                    <Textarea id="message" name="message" placeholder="We're interested in..." />
+                    <Label htmlFor="message">Tell us about your needs</Label>
+                    <Textarea id="message" name="message" placeholder="We're interested in..." required />
                   </div>
                   <SubmitButton />
                 </form>
