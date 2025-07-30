@@ -17,7 +17,7 @@ export default function SolutionsPage() {
                             Our AI-Powered Solutions
                         </h1>
                         </div>
-                        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
                             {solutions.map((solution) => (
                                 <Link key={solution.slug} href={`/solutions/${solution.slug}`} className="block h-full group">
                                     <Card className="flex flex-col text-center justify-between transition-all duration-300 group-hover:-translate-y-2 h-full bg-gradient-to-br from-green-500/20 to-purple-500/20 backdrop-blur-lg border-white/20 shadow-lg group-hover:shadow-2xl group-hover:from-green-500/30 group-hover:to-purple-500/30 p-6">
