@@ -1,7 +1,7 @@
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import { solutions } from "@/lib/solutions";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -16,9 +16,6 @@ export default function SolutionsPage() {
                         <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
                             Our AI-Powered Solutions
                         </h1>
-                        <p className="mt-4 max-w-3xl mx-auto text-xl text-muted-foreground">
-                            We provide a suite of intelligent tools designed to solve your most complex business challenges, drive efficiency, and unlock new opportunities for growth.
-                        </p>
                         </div>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                             {solutions.map((solution) => (
