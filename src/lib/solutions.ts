@@ -1,6 +1,7 @@
 import { type LucideIcon, Phone, Globe, Smartphone, Bot, Zap, ShieldCheck } from 'lucide-react';
 
 export interface Solution {
+  slug: string;
   icon: LucideIcon;
   title: string;
   description: string;
@@ -11,6 +12,7 @@ export interface Solution {
 
 export const solutions: Solution[] = [
   {
+    slug: "ai-receptionist",
     icon: Phone,
     title: "AI Receptionist",
     description: "Let AI handle your front desk – from calls to appointments and bookings, effortlessly!",
@@ -19,6 +21,7 @@ export const solutions: Solution[] = [
     dataAiHint: "document scanning",
   },
   {
+    slug: "web-development",
     icon: Globe,
     title: "Web Development",
     description: "Modern website with sleek design, built for your business.",
@@ -27,6 +30,7 @@ export const solutions: Solution[] = [
     dataAiHint: "analytics dashboard",
   },
   {
+    slug: "app-development",
     icon: Smartphone,
     title: "App Development",
     description: "Create powerful and intuitive mobile apps for iOS and Android that your users will love.",
@@ -35,6 +39,7 @@ export const solutions: Solution[] = [
     dataAiHint: "mobile app",
   },
   {
+    slug: "ai-powered-chatbots",
     icon: Bot,
     title: "AI-Powered Chatbots",
     description: "Enhance customer engagement with intelligent, 24/7 automated support that learns from every interaction.",
@@ -43,6 +48,7 @@ export const solutions: Solution[] = [
     dataAiHint: "chatbot interface",
   },
   {
+    slug: "ai-powered-automation-workflows",
     icon: Zap,
     title: "AI-Powered Automation Workflows",
     description: "Streamline your unique business processes with tailor-made AI automation solutions for maximum efficiency.",
@@ -51,6 +57,7 @@ export const solutions: Solution[] = [
     dataAiHint: "automation process",
   },
   {
+    slug: "maintenance-and-continuous-support",
     icon: ShieldCheck,
     title: "Maintenance and Continuous Support",
     description: "Peace of mind, built in. Our support keeps your solutions fast, safe, and future-ready.",
