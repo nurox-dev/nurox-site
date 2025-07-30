@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { type Project } from '@/lib/data/projects';
+import { type Project } from '@/lib/projects';
 
 interface ProjectCardProps {
   project: Project;

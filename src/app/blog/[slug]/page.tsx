@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { blogPosts } from '@/lib/data/blog';
+import { blogPosts } from '@/lib/blog';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Badge } from '@/components/ui/badge';

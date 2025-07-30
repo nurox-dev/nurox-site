@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { solutions } from "@/lib/data/solutions";
+import { solutions } from "@/lib/solutions";
 import { cn } from "@/lib/utils";
 
 export default function Solutions() {
