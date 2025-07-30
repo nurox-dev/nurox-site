@@ -1,8 +1,11 @@
 import { solutions } from "@/lib/solutions";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "../ui/button";
 
 export default function Solutions() {
+    const featuredSolutions = solutions.slice(0, 3);
     return (
         <section id="solutions" className="py-20 md:py-28 bg-transparent">
             <div className="container mx-auto px-4">
@@ -11,8 +14,8 @@ export default function Solutions() {
                         Our AI-Powered Solutions
                     </h2>
                 </div>
-                <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
-                    {solutions.map((solution) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {featuredSolutions.map((solution) => (
                         <Link key={solution.slug} href={`/solutions/${solution.slug}`} className="block h-full group">
                             <Card className="flex flex-col text-center justify-center transition-all duration-300 group-hover:-translate-y-2 h-full bg-gradient-to-br from-green-500/20 to-purple-500/20 backdrop-blur-lg border-white/20 shadow-lg group-hover:shadow-2xl group-hover:from-green-500/30 group-hover:to-purple-500/30 p-4 md:p-6">
                                 <CardHeader className="items-center p-0">
@@ -24,6 +27,16 @@ export default function Solutions() {
                             </Card>
                         </Link>
                     ))}
+                    <Link href="/solutions" className="block h-full group">
+                        <Card className="flex flex-col text-center justify-center items-center transition-all duration-300 group-hover:-translate-y-2 h-full bg-gradient-to-br from-green-500/20 to-purple-500/20 backdrop-blur-lg border-white/20 shadow-lg group-hover:shadow-2xl group-hover:from-green-500/30 group-hover:to-purple-500/30 p-4 md:p-6">
+                            <CardHeader className="items-center p-0">
+                                <CardTitle className="text-base md:text-lg mb-3">View More</CardTitle>
+                                <div className="p-3 bg-primary/10 rounded-full">
+                                    <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary" />
+                                </div>
+                            </CardHeader>
+                        </Card>
+                    </Link>
                 </div>
             </div>
         </section>
