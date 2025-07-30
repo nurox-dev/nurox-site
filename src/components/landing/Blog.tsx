@@ -69,6 +69,11 @@ export default function Blog() {
             </Card>
           ))}
         </div>
+         <div className="text-center mt-12">
+            <Button asChild>
+                <Link href="/blog">View All Posts</Link>
+            </Button>
+        </div>
       </div>
     </section>
   );
