@@ -28,7 +28,6 @@ export default function SolutionsPage() {
                                             <solution.icon className="h-8 w-8 text-primary" />
                                         </div>
                                         <CardTitle>{solution.title}</CardTitle>
-                                        <CardDescription className="pt-2">{solution.description}</CardDescription>
                                         </CardHeader>
                                         <CardContent>
                                         </CardContent>
