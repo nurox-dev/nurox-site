@@ -4,12 +4,12 @@ export default function WhatWeDo() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            What We Do
+            What We Do ?
           </h2>
         </div>
         <div className="max-w-4xl mx-auto">
           <blockquote className="text-center text-2xl md:text-3xl font-medium text-foreground/90 italic border-l-4 border-primary pl-6 md:pl-8">
-            "We automate calls, appointment bookings, and general inquiries— potentially bringing more consumers to you with exceptional efficiency."
+            "We automate calls, appointment bookings and general inquiries, potentially bringing more consumers to you with exceptional efficiency."
           </blockquote>
         </div>
       </div>
