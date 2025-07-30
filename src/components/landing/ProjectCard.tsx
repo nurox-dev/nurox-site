@@ -66,8 +66,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <CardTitle className="text-white text-2xl">{project.title}</CardTitle>
         </div>
       </div>
-      <CardContent className="flex-grow flex flex-col p-6">
-        <CardDescription className="flex-grow">{project.description}</CardDescription>
+      <CardContent className="flex-grow flex flex-col justify-end p-6">
         <Button asChild className="mt-6 self-start">
           <Link href={`/projects/${project.slug}`}>
             View Project <ArrowRight className="ml-2 h-4 w-4" />
