@@ -33,7 +33,7 @@ export default function Solutions() {
                                 <div className="p-3 bg-primary/10 rounded-full mb-3">
                                     <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                                 </div>
-                                <CardTitle className="text-base md:text-lg">View More</CardTitle>
+                                <CardTitle className="text-base md:text-lg">More</CardTitle>
                             </CardHeader>
                         </Card>
                     </Link>
