@@ -26,9 +26,6 @@ export default function Solutions() {
                                         {solution.title}
                                     </CardTitle>
                                 </CardHeader>
-                                <CardContent className="p-0 mt-4">
-                                    <ArrowRight className="h-6 w-6 text-primary mx-auto" />
-                                </CardContent>
                             </Card>
                         </Link>
                     ))}
