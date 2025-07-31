@@ -28,7 +28,7 @@ export default function SolutionsPage() {
                                             <CardTitle className="text-base md:text-lg">{solution.title}</CardTitle>
                                         </CardHeader>
                                         <CardContent className="p-0 mt-4">
-                                            <ArrowRight className="h-6 w-6 text-primary mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                            <ArrowRight className="h-6 w-6 text-primary mx-auto" />
                                         </CardContent>
                                     </Card>
                                 </Link>
