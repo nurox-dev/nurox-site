@@ -25,7 +25,9 @@ export default function SolutionsPage() {
                                             <div className="p-3 bg-primary/10 rounded-full mb-3">
                                                 <solution.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                                             </div>
-                                            <CardTitle className="text-base md:text-lg">{solution.title}</CardTitle>
+                                            <CardTitle className="flex items-center gap-2 text-base md:text-lg">
+                                                {solution.title}
+                                            </CardTitle>
                                         </CardHeader>
                                         <CardContent className="p-0 mt-4">
                                             <ArrowRight className="h-6 w-6 text-primary mx-auto" />
