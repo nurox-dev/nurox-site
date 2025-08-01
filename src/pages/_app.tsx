@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={cn('min-h-screen bg-background font-sans antialiased', inter.variable)}>
+      <main className={cn('min-h-screen font-sans antialiased', inter.variable)}>
         <Component {...pageProps} />
         <Toaster />
       </main>
