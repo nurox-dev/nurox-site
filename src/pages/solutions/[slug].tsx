@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import Image from 'next/image';
-import { solutions, Solution } from '@/lib/solutions';
+import { solutions, Solution, solutionIcons } from '@/lib/solutions';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Button } from '@/components/ui/button';
@@ -31,6 +31,8 @@ export default function SolutionDetailPage({ solution }: { solution: Solution })
     return <div>Solution not found</div>;
   }
 
+  const Icon = solutionIcons[solution.icon];
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -45,7 +47,7 @@ export default function SolutionDetailPage({ solution }: { solution: Solution })
                 </Button>
                  <div className="flex items-start gap-6 mb-6">
                     <div className="p-4 bg-primary/10 rounded-full mt-1">
-                        <solution.icon className="h-10 w-10 text-primary" />
+                        <Icon className="h-10 w-10 text-primary" />
                     </div>
                     <div>
                         <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
