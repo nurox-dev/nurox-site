@@ -1,3 +1,4 @@
+
 "use server";
 
 import { z } from "zod";
@@ -19,7 +20,6 @@ export type DemoRequestState = {
 };
 
 export async function submitDemoRequest(
-  prevState: DemoRequestState,
   formData: FormData
 ): Promise<DemoRequestState> {
   const validatedFields = demoRequestSchema.safeParse({

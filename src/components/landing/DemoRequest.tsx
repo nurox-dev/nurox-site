@@ -1,7 +1,7 @@
+
 "use client";
 
-import { useEffect } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useState, useTransition } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { submitDemoRequest, type DemoRequestState } from "@/lib/actions";
 import { Button } from "@/components/ui/button";
@@ -11,11 +11,10 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
+function SubmitButton({ isPending }: { isPending: boolean }) {
   return (
-    <Button type="submit" className="w-full" size="lg" disabled={pending}>
-      {pending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+    <Button type="submit" className="w-full" size="lg" disabled={isPending}>
+      {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
       Submit Request
     </Button>
   );
@@ -23,30 +22,38 @@ function SubmitButton() {
 
 export default function DemoRequest() {
   const { toast } = useToast();
-  const initialState: DemoRequestState = { message: "", errors: {}, success: false };
-  const [state, formAction] = useFormState(submitDemoRequest, initialState);
+  const [isPending, startTransition] = useTransition();
+  const [state, setState] = useState<DemoRequestState>({ message: "", errors: {}, success: false });
 
-  useEffect(() => {
-    if (state.message) {
-      if (state.success) {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+
+    startTransition(async () => {
+      const result = await submitDemoRequest(formData);
+      setState(result);
+
+      if (result.success) {
         toast({
           title: "Success!",
-          description: state.message,
+          description: result.message,
         });
-      } else if (state.errors) {
-        // Concatenate all error messages
-        const errorDescription = Object.values(state.errors)
+        // Optionally reset the form
+        event.currentTarget.reset();
+      } else if (result.errors) {
+        const errorDescription = Object.values(result.errors)
           .flat()
           .join(" \n");
 
         toast({
           variant: "destructive",
           title: "Please correct the errors",
-          description: errorDescription || state.message,
+          description: errorDescription || result.message,
         });
       }
-    }
-  }, [state, toast]);
+    });
+  };
+
 
   return (
     <section id="demo" className="py-20 md:py-28">
@@ -59,7 +66,7 @@ export default function DemoRequest() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form action={formAction} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name</Label>
                 <Input id="name" name="name" placeholder="John Doe" required />
@@ -87,7 +94,7 @@ export default function DemoRequest() {
                   </p>
                 )}
               </div>
-              <SubmitButton />
+              <SubmitButton isPending={isPending} />
             </form>
           </CardContent>
         </Card>
