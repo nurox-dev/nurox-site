@@ -8,6 +8,12 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+export function generateStaticParams() {
+  return solutions.map((solution) => ({
+    slug: solution.slug,
+  }));
+}
+
 export default function SolutionDetailPage({ params }: { params: { slug: string } }) {
   const solution = solutions.find((s) => s.slug === params.slug);
 

@@ -272,42 +272,5 @@ export const blogPosts: BlogPost[] = [
             name: "Anish Adhikari",
             avatarUrl: "/images/anish.png"
         }
-    },
-    {
-        slug: "ethical-ai-bias-fairness",
-        title: "Ethical AI: Navigating the Complexities of Bias and Fairness",
-        excerpt: "As AI systems become more integrated into our lives, ensuring they are fair and unbiased is critically important. This article delves into the complexities of ethical AI, discussing common sources of bias, strategies for mitigation, and the importance of transparency and accountability in building AI that benefits everyone.",
-        content: `
-<h2>A Double-Edged Sword</h2>
-
-<p>As AI systems become more integrated into our lives, ensuring they are fair and unbiased is critically important. The same algorithms that can be used to recommend movies can also be used to make decisions about loans, hiring, and even criminal justice. This article delves into the complexities of ethical AI, discussing common sources of bias, strategies for mitigation, and the importance of transparency and accountability in building AI that benefits everyone.</p>
-
-<h3>Sources of Bias</h3>
-<p>AI bias can creep in from several sources:</p>
-<ul>
-    <li><strong>Data Bias:</strong> If the data used to train the model reflects existing societal biases, the model will learn and perpetuate them.</li>
-    <li><strong>Algorithmic Bias:</strong> The algorithm itself might be designed in a way that inherently favors certain outcomes.</li>
-    <li><strong>Human Bias:</strong> The developers and users of AI systems can introduce their own conscious or unconscious biases.</li>
-</ul>
-
-<h3>Strategies for Mitigation</h3>
-<p>Addressing bias requires a multi-faceted approach:</p>
-<ul>
-    <li><strong>Diverse and Representative Data:</strong> Actively work to collect data that is representative of the population the AI will affect.</li>
-    <li><strong>Fairness Metrics:</strong> Use specific metrics to audit and measure the fairness of a model's predictions across different demographic groups.</li>
-    <li><strong>Bias Detection and Correction Tools:</strong> Employ specialized tools and techniques to identify and mitigate bias in both the data and the model.</li>
-</ul>
-
-<h3>The Importance of Transparency</h3>
-<p>For AI to be trusted, it must be transparent. This means being open about how the AI works, the data it was trained on, and its limitations. Explainable AI (XAI) plays a key role here, providing insights into why a model made a particular decision. Building ethical AI is not just a technical challenge; it's a societal one that requires ongoing dialogue and collaboration.</p>
-        `,
-        imageUrl: "https://placehold.co/600x400.png",
-        dataAiHint: "ethics technology",
-        category: "AI Ethics",
-        date: "July 15, 2024",
-        author: {
-            name: "David Chen",
-            avatarUrl: "https://placehold.co/100x100.png"
-        }
     }
 ];
