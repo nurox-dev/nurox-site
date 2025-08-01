@@ -76,7 +76,7 @@ body {
   }
   body {
     @apply text-foreground;
-    background-image: linear-gradient(to bottom right, hsl(250 100% 94%), hsl(250 90% 90%));
+    background-image: linear-gradient(to bottom right, hsl(250 100% 88%), hsl(250 90% 85%));
   }
   .prose h2 {
       @apply text-3xl font-bold mb-4 mt-8;
