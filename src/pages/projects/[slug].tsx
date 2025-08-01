@@ -1,23 +1,33 @@
-import { notFound } from 'next/navigation';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { ParsedUrlQuery } from 'querystring';
 import Image from 'next/image';
-import { projects } from '@/lib/projects';
+import { projects, Project } from '@/lib/projects';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
+interface IParams extends ParsedUrlQuery {
+  slug: string;
 }
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
+  return { paths, fallback: false };
+};
 
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { slug } = context.params as IParams;
+  const project = projects.find((p) => p.slug === slug);
+  return { props: { project } };
+};
+
+export default function ProjectDetailPage({ project }: { project: Project }) {
   if (!project) {
-    notFound();
+    return <div>Project not found</div>;
   }
 
   return (

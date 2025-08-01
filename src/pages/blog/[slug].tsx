@@ -1,23 +1,33 @@
-import { notFound } from 'next/navigation';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { ParsedUrlQuery } from 'querystring';
 import Image from 'next/image';
-import { blogPosts } from '@/lib/blog';
+import { blogPosts, BlogPost } from '@/lib/blog';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { CalendarDays, User } from 'lucide-react';
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+interface IParams extends ParsedUrlQuery {
+  slug: string;
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = blogPosts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+  return { paths, fallback: false };
+};
 
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { slug } = context.params as IParams;
+  const post = blogPosts.find((p) => p.slug === slug);
+  return { props: { post } };
+};
+
+export default function BlogPostPage({ post }: { post: BlogPost }) {
   if (!post) {
-    notFound();
+    return <div>Post not found</div>;
   }
 
   return (

@@ -1,6 +1,7 @@
-import { notFound } from 'next/navigation';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { ParsedUrlQuery } from 'querystring';
 import Image from 'next/image';
-import { solutions } from '@/lib/solutions';
+import { solutions, Solution } from '@/lib/solutions';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Button } from '@/components/ui/button';
@@ -8,17 +9,26 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-export function generateStaticParams() {
-  return solutions.map((solution) => ({
-    slug: solution.slug,
-  }));
+interface IParams extends ParsedUrlQuery {
+  slug: string;
 }
 
-export default function SolutionDetailPage({ params }: { params: { slug: string } }) {
-  const solution = solutions.find((s) => s.slug === params.slug);
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = solutions.map((solution) => ({
+    params: { slug: solution.slug },
+  }));
+  return { paths, fallback: false };
+};
 
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { slug } = context.params as IParams;
+  const solution = solutions.find((s) => s.slug === slug);
+  return { props: { solution } };
+};
+
+export default function SolutionDetailPage({ solution }: { solution: Solution }) {
   if (!solution) {
-    notFound();
+    return <div>Solution not found</div>;
   }
 
   return (
