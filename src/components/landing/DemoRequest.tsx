@@ -1,40 +1,97 @@
+"use client";
+
+import { useEffect } from "react";
+import { useFormState, useFormStatus } from "react-dom";
+import { useToast } from "@/hooks/use-toast";
+import { submitDemoRequest, type DemoRequestState } from "@/lib/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Loader2 } from "lucide-react";
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" className="w-full" size="lg" disabled={pending}>
+      {pending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+      Submit Request
+    </Button>
+  );
+}
 
 export default function DemoRequest() {
+  const { toast } = useToast();
+  const initialState: DemoRequestState = { message: "", errors: {}, success: false };
+  const [state, formAction] = useFormState(submitDemoRequest, initialState);
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast({
+          title: "Success!",
+          description: state.message,
+        });
+      } else if (state.errors) {
+        // Concatenate all error messages
+        const errorDescription = Object.values(state.errors)
+          .flat()
+          .join(" \n");
+
+        toast({
+          variant: "destructive",
+          title: "Please correct the errors",
+          description: errorDescription || state.message,
+        });
+      }
+    }
+  }, [state, toast]);
 
   return (
     <section id="demo" className="py-20 md:py-28">
-        <div className="container mx-auto px-4">
-            <Card className="max-w-2xl mx-auto">
-                <CardHeader className="text-center">
-                    <CardTitle className="text-3xl md:text-4xl">Request a Demo</CardTitle>
-                    <CardDescription className="text-lg">
-                        Let's explore how we can help you grow. Fill out the form, and we'll get in touch.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <form className="space-y-6">
-                        <div className="space-y-2">
-                            <Label htmlFor="name">Full Name</Label>
-                            <Input id="name" name="name" placeholder="John Doe" required />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="email">Work Email</Label>
-                            <Input id="email" name="email" type="email" placeholder="john.doe@example.com" required />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="message">Tell us about your needs</Label>
-                            <Textarea id="message" name="message" placeholder="I'm interested in..." required minLength={10} />
-                        </div>
-                        <Button type="submit" className="w-full" size="lg">Submit Request</Button>
-                    </form>
-                </CardContent>
-            </Card>
-        </div>
+      <div className="container mx-auto px-4">
+        <Card className="max-w-2xl mx-auto">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl md:text-4xl">Request a Demo</CardTitle>
+            <CardDescription className="text-lg">
+              Let's explore how we can help you grow. Fill out the form, and we'll get in touch.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form action={formAction} className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="name">Full Name</Label>
+                <Input id="name" name="name" placeholder="John Doe" required />
+                {state.errors?.name && (
+                  <p className="text-sm font-medium text-destructive">
+                    {state.errors.name.join(", ")}
+                  </p>
+                )}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Work Email</Label>
+                <Input id="email" name="email" type="email" placeholder="john.doe@example.com" required />
+                 {state.errors?.email && (
+                  <p className="text-sm font-medium text-destructive">
+                    {state.errors.email.join(", ")}
+                  </p>
+                )}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message">Tell us about your needs</Label>
+                <Textarea id="message" name="message" placeholder="I'm interested in..." required minLength={10} />
+                 {state.errors?.message && (
+                  <p className="text-sm font-medium text-destructive">
+                    {state.errors.message.join(", ")}
+                  </p>
+                )}
+              </div>
+              <SubmitButton />
+            </form>
+          </CardContent>
+        </Card>
+      </div>
     </section>
   );
 }
