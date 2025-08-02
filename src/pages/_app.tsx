@@ -23,7 +23,26 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main className={cn('min-h-screen font-sans antialiased', inter.variable)}>
         <Component {...pageProps} />
         <Toaster />
-        <vapi-widget assistant-id="bc883f44-6a00-4140-916c-377c07f8b92d" public-key="72526477-7779-4056-a04c-e98ea84809a5"></vapi-widget>
+        <vapi-widget
+          public-key="72526477-7779-4056-a04c-e98ea84809a5"
+          assistant-id="bc883f44-6a00-4140-916c-377c07f8b92d"
+          mode="voice"
+          theme="dark"
+          base-bg-color="#000000"
+          accent-color="#0ba231"
+          cta-button-color="#000000"
+          cta-button-text-color="#ffffff"
+          border-radius="large"
+          size="compact"
+          position="bottom-right"
+          title="TALK WITH AI"
+          start-button-text="Start"
+          end-button-text="End Call"
+          chat-first-message="Hey, How can I help you today?"
+          chat-placeholder="Type your message..."
+          voice-show-transcript="true"
+          consent-required="false"
+        ></vapi-widget>
         <Script
             src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
             strategy="afterInteractive"
