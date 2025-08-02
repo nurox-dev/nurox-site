@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 import { Toaster } from '@/components/ui/toaster';
@@ -22,6 +23,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main className={cn('min-h-screen font-sans antialiased', inter.variable)}>
         <Component {...pageProps} />
         <Toaster />
+        <vapi-widget assistant-id="bc883f44-6a00-4140-916c-377c07f8b92d" public-key="72526477-7779-4056-a04c-e98ea84809a5"></vapi-widget>
+        <Script
+            src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
+            strategy="afterInteractive"
+        />
       </main>
     </>
   );
