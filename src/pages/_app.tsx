@@ -6,51 +6,8 @@ import { cn } from '@/lib/utils';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import '../styles/globals.css';
-import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-
-function VapiWidget() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    const widget = document.createElement('vapi-widget');
-    widget.setAttribute('public-key', '72526477-7779-4056-a04c-e98ea84809a5');
-    widget.setAttribute('assistant-id', 'bc883f44-6a00-4140-916c-377c07f8b92d');
-    widget.setAttribute('mode', 'voice');
-    widget.setAttribute('theme', 'dark');
-    widget.setAttribute('base-bg-color', '#000000');
-    widget.setAttribute('accent-color', '#0ba231');
-    widget.setAttribute('cta-button-color', '#000000');
-    widget.setAttribute('cta-button-text-color', '#ffffff');
-    widget.setAttribute('border-radius', 'large');
-    widget.setAttribute('size', 'compact');
-    widget.setAttribute('position', 'bottom-right');
-    widget.setAttribute('title', 'TALK WITH AI');
-    widget.setAttribute('start-button-text', 'Start');
-    widget.setAttribute('end-button-text', 'End Call');
-    widget.setAttribute('chat-first-message', 'Hey, How can I help you today?');
-    widget.setAttribute('chat-placeholder', 'Type your message...');
-    widget.setAttribute('voice-show-transcript', 'true');
-    widget.setAttribute('consent-required', 'false');
-    widget.setAttribute('data-ai-hint', 'vapi widget');
-    document.body.appendChild(widget);
-
-    return () => {
-      document.body.removeChild(script);
-      // Check if the widget is still a child of the body before removing it.
-      if (widget.parentNode === document.body) {
-        document.body.removeChild(widget);
-      }
-    };
-  }, []);
-
-  return null;
-}
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   const primaryColor = "hsl(250 65% 55%)"; // From globals.css --primary
@@ -75,7 +32,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         </main>
         <Footer />
         <Toaster />
-        <VapiWidget />
       </div>
     </>
   );
