@@ -10,53 +10,6 @@ const SocialLink = ({ href, children }: { href: string; children: React.ReactNod
   </Link>
 );
 
-function VapiWidget() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    const widget = document.createElement('vapi-widget');
-    widget.setAttribute('public-key', '72526477-7779-4056-a04c-e98ea84809a5');
-    widget.setAttribute('assistant-id', 'bc883f44-6a00-4140-916c-377c07f8b92d');
-    widget.setAttribute('mode', 'voice');
-    widget.setAttribute('theme', 'dark');
-    widget.setAttribute('base-bg-color', '#000000');
-    widget.setAttribute('accent-color', '#0ba231');
-    widget.setAttribute('cta-button-color', '#000000');
-    widget.setAttribute('cta-button-text-color', '#ffffff');
-    widget.setAttribute('border-radius', 'large');
-    widget.setAttribute('size', 'compact');
-    widget.setAttribute('position', 'bottom-right');
-    widget.setAttribute('title', 'TALK WITH AI');
-    widget.setAttribute('start-button-text', 'Start');
-    widget.setAttribute('end-button-text', 'End Call');
-    widget.setAttribute('chat-first-message', 'Hey, How can I help you today?');
-    widget.setAttribute('chat-placeholder', 'Type your message...');
-    widget.setAttribute('voice-show-transcript', 'true');
-    widget.setAttribute('consent-required', 'false');
-    widget.setAttribute('data-ai-hint', 'vapi widget');
-    document.body.appendChild(widget);
-
-    return () => {
-      // Use a try-catch block to prevent errors if elements are already gone
-      try {
-        if (script.parentNode) {
-            script.parentNode.removeChild(script);
-        }
-        if (widget.parentNode) {
-            widget.parentNode.removeChild(widget);
-        }
-      } catch (error) {
-        console.log('Error removing Vapi widget:', error);
-      }
-    };
-  }, []);
-
-  return null;
-}
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -78,7 +31,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-       <VapiWidget />
     </footer>
   );
 }
