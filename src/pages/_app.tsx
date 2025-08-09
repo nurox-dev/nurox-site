@@ -52,8 +52,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     document.body.appendChild(script);
 
     return () => {
-      if (document.body.contains(vapiWidget)) {
-        document.body.removeChild(vapiWidget);
+      const widget = document.querySelector('vapi-widget');
+      if (widget && document.body.contains(widget)) {
+        document.body.removeChild(widget);
       }
       if(document.body.contains(script)){
         document.body.removeChild(script);
