@@ -14,8 +14,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 function MyApp({ Component, pageProps }: AppProps) {
   const primaryColor = "hsl(250 65% 55%)"; // From globals.css --primary
-  const svgString = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='${encodeURIComponent(primaryColor)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m8 3 4 8 5-5 5 15H2L8 3z'/></svg>`;
-  const faviconDataUri = `data:image/svg+xml,${svgString}`;
+  const svgIcon = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='${encodeURIComponent(primaryColor)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m8 3 4 8 5-5 5 15H2L8 3z'/></svg>`;
+  const faviconDataUri = `data:image/svg+xml,${svgIcon}`;
 
   useEffect(() => {
     // Prevent multiple injections
