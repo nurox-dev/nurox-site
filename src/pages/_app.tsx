@@ -17,6 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const faviconDataUri = `data:image/svg+xml,${svgString}`;
 
   useEffect(() => {
+    // Prevent multiple injections
+    if (document.querySelector("vapi-widget")) return;
+
     const vapiWidget = document.createElement('vapi-widget');
     vapiWidget.setAttribute('public-key', '72526477-7779-4056-a04c-e98ea84809a5');
     vapiWidget.setAttribute('assistant-id', 'bc883f44-6a00-4140-916c-377c07f8b92d');
@@ -36,17 +39,25 @@ function MyApp({ Component, pageProps }: AppProps) {
     vapiWidget.setAttribute('chat-placeholder', 'Type your message...');
     vapiWidget.setAttribute('voice-show-transcript', 'true');
     vapiWidget.setAttribute('consent-required', 'false');
-    document.body.appendChild(vapiWidget);
-
+    
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js';
     script.async = true;
     script.type = 'text/javascript';
+
+    script.onload = () => {
+      document.body.appendChild(vapiWidget);
+    }
+    
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(vapiWidget);
-      document.body.removeChild(script);
+      if (document.body.contains(vapiWidget)) {
+        document.body.removeChild(vapiWidget);
+      }
+      if(document.body.contains(script)){
+        document.body.removeChild(script);
+      }
     }
   }, []);
 
