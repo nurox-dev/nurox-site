@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     vapiWidget.setAttribute('mode', 'voice');
     vapiWidget.setAttribute('theme', 'dark');
     vapiWidget.setAttribute('base-bg-color', '#000000');
-    vapiWidget.setAttribute('accent-color', '#0ba231');
+    vapiWidget.setAttribute('accent-color', '#5023F0');
     vapiWidget.setAttribute('cta-button-color', '#000000');
     vapiWidget.setAttribute('cta-button-text-color', '#ffffff');
     vapiWidget.setAttribute('border-radius', 'large');
@@ -38,8 +38,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     vapiWidget.setAttribute('chat-first-message', 'Hey, How can I help you today?');
     vapiWidget.setAttribute('chat-placeholder', 'Type your message...');
     vapiWidget.setAttribute('voice-show-transcript', 'true');
-    vapiWidget.setAttribute('consent-required', 'false');
-    
+    vapiWidget.setAttribute('consent-required', 'true');
+    vapiWidget.setAttribute('consent-title', 'Terms and conditions');
+    vapiWidget.setAttribute('consent-content', 'By clicking "Agree," and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service.');
+    vapiWidget.setAttribute('consent-storage-key', 'vapi_widget_consent');
+
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js';
     script.async = true;
