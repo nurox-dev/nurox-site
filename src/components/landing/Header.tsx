@@ -1,3 +1,4 @@
+
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Mountain } from "lucide-react";
 import Link from "next/link";
@@ -19,16 +20,9 @@ export default function Header() {
             <span className="font-bold sm:inline-block text-lg text-primary">Nurox.dev</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <NavLink href="/projects">Projects</NavLink>
-            <NavLink href="/solutions">Solutions</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="/demo">Demo</NavLink>
-          </nav>
-
           <Sheet>
               <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="md:hidden">
+                  <Button variant="ghost" size="icon">
                       <Menu className="h-5 w-5" />
                       <span className="sr-only">Toggle Menu</span>
                   </Button>
