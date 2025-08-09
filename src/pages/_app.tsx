@@ -62,6 +62,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={faviconDataUri} type="image/svg+xml" />
       </Head>
+      <Script 
+        src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" 
+        strategy="afterInteractive"
+      />
       <div className={cn('flex flex-col min-h-screen font-sans antialiased', inter.variable)}>
         <Header />
         <main className="flex-1">
@@ -69,6 +73,29 @@ function MyApp({ Component, pageProps }: AppProps) {
         </main>
         <Footer />
         <Toaster />
+        <vapi-widget
+          public-key="72526477-7779-4056-a04c-e98ea84809a5"
+          assistant-id="bc883f44-6a00-4140-916c-377c07f8b92d"
+          mode="voice"
+          theme="dark"
+          base-bg-color="#000000"
+          accent-color="#1bc618"
+          cta-button-color="#000000"
+          cta-button-text-color="#ffffff"
+          border-radius="large"
+          size="compact"
+          position="bottom-right"
+          title="TALK WITH AI"
+          start-button-text="Start"
+          end-button-text="End Call"
+          chat-first-message="Hey, How can I help you today?"
+          chat-placeholder="Type your message..."
+          voice-show-transcript="true"
+          consent-required="true"
+          consent-title="Terms and conditions"
+          consent-content="By clicking "Agree," and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service."
+          consent-storage-key="vapi_widget_consent"
+        ></vapi-widget>
       </div>
       <Script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript" />
     </>
