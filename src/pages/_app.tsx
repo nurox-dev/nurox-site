@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           mode="voice"
           theme="dark"
           base-bg-color="#000000"
-          accent-color="#1bc618"
+          accent-color="#5023F0"
           cta-button-color="#000000"
           cta-button-text-color="#ffffff"
           border-radius="large"
