@@ -1,3 +1,4 @@
+
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
@@ -38,10 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     vapiWidget.setAttribute('chat-first-message', 'Hey, How can I help you today?');
     vapiWidget.setAttribute('chat-placeholder', 'Type your message...');
     vapiWidget.setAttribute('voice-show-transcript', 'true');
-    vapiWidget.setAttribute('consent-required', 'true');
-    vapiWidget.setAttribute('consent-title', 'Terms and conditions');
-    vapiWidget.setAttribute('consent-content', 'By clicking "Agree," and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service.');
-    vapiWidget.setAttribute('consent-storage-key', 'vapi_widget_consent');
+    vapiWidget.setAttribute('consent-required', 'false');
 
     document.body.appendChild(vapiWidget);
     
