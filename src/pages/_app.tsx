@@ -43,24 +43,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     vapiWidget.setAttribute('consent-content', 'By clicking "Agree," and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service.');
     vapiWidget.setAttribute('consent-storage-key', 'vapi_widget_consent');
 
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js';
-    script.async = true;
-    script.type = 'text/javascript';
-
-    script.onload = () => {
-      document.body.appendChild(vapiWidget);
-    }
+    document.body.appendChild(vapiWidget);
     
-    document.body.appendChild(script);
-
     return () => {
       const widget = document.querySelector('vapi-widget');
       if (widget && document.body.contains(widget)) {
         document.body.removeChild(widget);
-      }
-      if(document.body.contains(script)){
-        document.body.removeChild(script);
       }
     }
   }, []);
@@ -84,6 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Footer />
         <Toaster />
       </div>
+      <Script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript" />
     </>
   );
 }
